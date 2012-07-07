@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF86C163-676C-467E-AE0F-43B2364F2BD2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BNetLibrary</RootNamespace>
+    <AssemblyName>BNetLibrary</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BNet\BattleNetCredential.cs" />
+    <Compile Include="BNet\CDKey.cs" />
+    <Compile Include="BNet\CheckRevision.cs" />
+    <Compile Include="BNet\Clients\BNCSClient.cs" />
+    <Compile Include="BNet\Clients\BNetClient.cs" />
+    <Compile Include="BNet\Clients\BNFTPClient.cs" />
+    <Compile Include="BNet\Clients\D2Client.cs" />
+    <Compile Include="BNet\Clients\D2GSClient.cs" />
+    <Compile Include="BNet\Clients\GameClient.cs" />
+    <Compile Include="BNet\Clients\MCPClient.cs" />
+    <Compile Include="BNet\Exceptions\CharacterNotFoundException.cs" />
+    <Compile Include="BNet\Exceptions\IPBannedException.cs" />
+    <Compile Include="BNet\Exceptions\RealmNotFoundException.cs" />
+    <Compile Include="BNet\Exceptions\UnknownPacketException.cs" />
+    <Compile Include="BNet\Huffman.cs" />
+    <Compile Include="BNet\Objects\DataTables.cs" />
+    <Compile Include="BNet\Objects\Units.cs" />
+    <Compile Include="BNet\Packets\BNCSPacket.cs" />
+    <Compile Include="BNet\Packets\BNCS\AccountLogin.cs" />
+    <Compile Include="BNet\Packets\BNCS\AdvertiseGame.cs" />
+    <Compile Include="BNet\Packets\BNCS\AuthCheck.cs" />
+    <Compile Include="BNet\Packets\BNCS\AuthInfo.cs" />
+    <Compile Include="BNet\Packets\BNCS\ChatCommand.cs" />
+    <Compile Include="BNet\Packets\BNCS\ChatEvent.cs" />
+    <Compile Include="BNet\Packets\BNCS\CheckAd.cs" />
+    <Compile Include="BNet\Packets\BNCS\DisplayAd.cs" />
+    <Compile Include="BNet\Packets\BNCS\EnterChat.cs" />
+    <Compile Include="BNet\Packets\BNCS\GetChannelList.cs" />
+    <Compile Include="BNet\Packets\BNCS\GetFileTime.cs" />
+    <Compile Include="BNet\Packets\BNCS\JoinChannel.cs" />
+    <Compile Include="BNet\Packets\BNCS\NotifyJoin.cs" />
+    <Compile Include="BNet\Packets\BNCS\NullPacket.cs" />
+    <Compile Include="BNet\Packets\BNCS\Ping.cs" />
+    <Compile Include="BNet\Packets\BNCS\QueryRealms.cs" />
+    <Compile Include="BNet\Packets\BNCS\RealmLogin.cs" />
+    <Compile Include="BNet\Packets\BNCS\RequestNews.cs" />
+    <Compile Include="BNet\Packets\BNFTPV1Packet.cs" />
+    <Compile Include="BNet\Packets\BNFTP\ReceiveFile.cs" />
+    <Compile Include="BNet\Packets\BNFTP\RequestFile.cs" />
+    <Compile Include="BNet\Packets\D2GSPacket.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AddAttribute.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AddExperience.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AddUnit.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AllyPartyInfo.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AssignHotkey.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AssignLevelWarp.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AssignMerc.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AssignNPC.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AssignObject.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AssignPlayer.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AssignPlayerToParty.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\AttributeUpdate.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\BaseSkillLevels.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\ButtonAction.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\ChargeupActive.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\ClearCursor.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\CorpseAssign.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\DelayedState.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\EndState.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\EventMessage.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\GameQuestInfo.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\GameState.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\GoldInTrade.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\GoldToInventory.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\IPBan.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\ItemAction.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\LifeManaUpdate.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\MapHide.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\MapReveal.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\MercAttribute.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\MercForHire.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\NPC.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\ObjectState.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\PartyAutomapInfo.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\PetAction.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\Player.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\PlaySound.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\Pong.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\PortalOwner.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\QuestInfo.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\QuestItemState.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\QuestLogInfo.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\ReassignPlayer.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\ReceiveChat.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\RelationshipChange.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\RelationshipUpdate.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\RemoveObject.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\ReportKill.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\SetItemState.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\SetSkill.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\SetState.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\SkillTriggered.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\SpecialQuestEvent.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\StartMercList.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\TownPortalState.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\TradeAccepted.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\UnknownRecv.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\UpdateItemSkill.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\UpdateItemStats.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\UseScroll.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\UseSkill.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\UseStackableItem.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\WalkVerify.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\WardenRequest.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\WaypointMenu.cs" />
+    <Compile Include="BNet\Packets\D2GS\Incoming\WeaponSwitch.cs" />
+    <Compile Include="BNet\Packets\D2GS\Outgoing\Character.cs" />
+    <Compile Include="BNet\Packets\D2GS\Outgoing\Chat.cs" />
+    <Compile Include="BNet\Packets\D2GS\Outgoing\Entity.cs" />
+    <Compile Include="BNet\Packets\D2GS\Outgoing\Game.cs" />
+    <Compile Include="BNet\Packets\D2GS\Outgoing\Interact.cs" />
+    <Compile Include="BNet\Packets\D2GS\Outgoing\ItemAction.cs" />
+    <Compile Include="BNet\Packets\D2GS\Outgoing\Merc.cs" />
+    <Compile Include="BNet\Packets\D2GS\Outgoing\Move.cs" />
+    <Compile Include="BNet\Packets\D2GS\Outgoing\UseSkill.cs" />
+    <Compile Include="BNet\Packets\D2GS\Outgoing\WardenResponse.cs" />
+    <Compile Include="BNet\Packets\D2Packet.cs" />
+    <Compile Include="BNet\Packets\MCPPacket.cs" />
+    <Compile Include="BNet\Packets\MCP\CharLogon.cs" />
+    <Compile Include="BNet\Packets\MCP\CreateGame.cs" />
+    <Compile Include="BNet\Packets\MCP\CreateGameQueue.cs" />
+    <Compile Include="BNet\Packets\MCP\GetGameInfo.cs" />
+    <Compile Include="BNet\Packets\MCP\GetGameList.cs" />
+    <Compile Include="BNet\Packets\MCP\GetMotd.cs" />
+    <Compile Include="BNet\Packets\MCP\JoinGame.cs" />
+    <Compile Include="BNet\Packets\MCP\RequestCharList.cs" />
+    <Compile Include="BNet\Packets\MCP\Startup.cs" />
+    <Compile Include="BNet\Utilities.cs" />
+    <Compile Include="BNet\Warden.cs" />
+    <Compile Include="BNet\XSha1.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ProxySocket\ProxySocket\ProxySocket.csproj">
+      <Project>{FA4617FE-6981-4CA4-8941-98A1F78CC19D}</Project>
+      <Name>ProxySocket</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MpqLib\MpqLib.csproj">
+      <Project>{79A2B193-4ED6-4C07-A1D3-69C499836A66}</Project>
+      <Name>MpqLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{826D9894-FE3C-4D48-AD00-91785A232D96}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
